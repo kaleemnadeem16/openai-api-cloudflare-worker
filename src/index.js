@@ -2,7 +2,6 @@ import OpenAI from 'openai';
 
 export default {
 	async fetch(request, env, ctx) {
-		return new Response('Hello World!');
 		const openai = new OpenAI({
 			apiKey: env.OPENAI_API_KEY,
 		})
@@ -19,6 +18,7 @@ export default {
 			console.error('Error:', error);
 			return new Response('Error: ' + error.message, { status: 500 });
 		}
+		
 		
 	},
 };
