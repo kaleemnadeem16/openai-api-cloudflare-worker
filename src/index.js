@@ -9,7 +9,7 @@ export default {
 			const response = await openai.chat.completions.create({
 				model: 'gpt-4.1-nano',
 				messages: [
-					{ role: 'user', content: 'What is the most nearest holiday!' },
+					{ role: 'user', content: 'What is the most nearest holiday in Pakistan?' },
 				],
 			});
 			return new Response(JSON.stringify(response));
